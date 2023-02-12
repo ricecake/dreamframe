@@ -1,0 +1,66 @@
+1 ROOT PRO
+
+.25 PRO     S
+1 PRO     S , MODS
+
+1 MODS     ADJ
+2 MODS     ADJ , MODS
+
+
+1 S     NP VP
+
+1 NP     Det N 
+.1 NP     NP PP
+
+1 PP     P NP
+
+1 VP     V NP
+1 VP     VDET P NP 
+.1 VP     VP PP
+
+1 VDET   VD P NP
+
+1 Det     a 
+#1 Det     the
+
+1 V     chasing 
+1 V     eating
+1 V     posing
+
+1 VD     sitting
+1 VD     running
+1 VD     standing
+1 VD     posing
+
+1 P     on 
+1 P     in
+1 P     with
+
+
+1 N     dog 
+1 N     cat
+1 N     man
+1 N     woman
+1 N     mouse
+1 N     bird
+1 N     crow
+1 N     penguin
+1 N     window
+1 N     rain
+1 N     forest
+1 N     city
+1 N     snow
+1 N     picnic
+1 N     car
+1 N     bluejay
+1 N     cardinal
+1 N     kitten
+1 N     napkin
+1 N     bread
+1 N     toast
+1 N     raincoat
+
+1 ADJ blue
+1 ADJ red 
+1 ADJ cyberpunk
+1 ADJ broken
