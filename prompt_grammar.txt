@@ -14,12 +14,6 @@
 1 MODS     by Artist
 1 MODS Style style
 
-1 Style cyberpunk
-1 Style art nouveau
-1 Style fart nouveau
-2 Style fart deco
-1 Style art deco
-1 Style dadism
 
 
 1 S     NP VP
@@ -38,8 +32,15 @@
 
 1 VDET   VD P NP
 
+
 1 Det     a 
-#1 Det     the
+
+1 Style cyberpunk
+1 Style art nouveau
+1 Style fart nouveau
+2 Style fart deco
+1 Style art deco
+1 Style dadism
 
 1 V     chasing 
 1 V     eating
@@ -54,15 +55,12 @@
 1 VD     laughing
 1 VD     sneezing
 
-
 1 P     on 
 1 P     in
 1 P     with
 1 P     as
 1 P     at
 
-
-## taken from https://www.englishclub.com/grammar/prepositions-list.htm
 1 P aboard
 1 P about
 1 P above
@@ -133,7 +131,6 @@
 1 P with
 1 P within
 1 P without
-
 
 1 N     dog 
 1 N     cat
