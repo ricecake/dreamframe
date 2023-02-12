@@ -89,9 +89,6 @@
 1 P after
 1 P against
 1 P along
-1 P amid
-1 P among
-1 P anti
 1 P around
 1 P as
 1 P at
@@ -101,15 +98,12 @@
 1 P beneath
 1 P beside
 1 P besides
-1 P between
 1 P beyond
-1 P but
 1 P by
 1 P concerning
 1 P considering
 1 P despite
 1 P down
-1 P during
 1 P except
 1 P excepting
 1 P excluding
@@ -130,13 +124,9 @@
 1 P outside
 1 P over
 1 P past
-1 P per
 1 P plus
 1 P regarding
-1 P round
 1 P save
-1 P since
-1 P than
 1 P through
 1 P to
 1 P toward
@@ -144,8 +134,6 @@
 1 P under
 1 P underneath
 1 P unlike
-1 P until
-1 P up
 1 P upon
 1 P versus
 1 P via
@@ -2956,7 +2944,6 @@
 1 N nobody
 1 N repeat
 1 N round
-1 N sing
 1 N slide
 1 N strip
 1 N whereas
