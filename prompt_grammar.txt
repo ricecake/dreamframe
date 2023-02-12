@@ -9,7 +9,8 @@
 
 1 S     NP VP
 
-1 NP     Det N 
+1 NP     Det N
+.5 NP    Det ADJ N 
 .1 NP     NP PP
 
 1 PP     P NP
@@ -31,12 +32,15 @@
 1 VD     running
 1 VD     standing
 1 VD     posing
+1 VD     laughing
+1 VD     sneezing
+
 
 1 P     on 
 1 P     in
 1 P     with
 1 P     as
-
+1 P     at
 
 1 N     dog 
 1 N     cat
