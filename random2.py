@@ -35,11 +35,11 @@ def sentence_generator(rules, symbol, non_terminal, sentence):
 
 def add_text_to_image(draw, image_height, epd_width, title_text="", artist_text="",
                         title_location= 25,
-                        artist_location=10,
+                        artist_location=5,
                         padding=5,
                         opacity=100,
                         title_size=25,
-                        artist_size=10):
+                        artist_size=15):
 
     title_font = ImageFont.truetype('/usr/share/fonts/droid/DroidSansMono.ttf', size=title_size)
     artist_font = ImageFont.truetype('/usr/share/fonts/droid/DroidSansMono.ttf', size=artist_size)
@@ -63,16 +63,48 @@ def add_text_to_image(draw, image_height, epd_width, title_text="", artist_text=
 
     draw_box = max_area([artist_box, title_box])
     draw_box = tuple(sum(x) for x in zip(draw_box, (-padding, -padding, padding, padding)))
+    
+    draw_box = min_area([(0, 0, epd_width, image_height), draw_box])
 
     # Only draw if we previously set proceed flag
     if proceed is True:
+
+        # while (title_box is None or title_box[0] > draw_box[2] - draw_box[0] or title_box[1] > draw_box[3] - draw_box[1]) and title_size > artist_size:
+        while (title_box is None or title_box[0] < draw_box[0] or title_box[1] < draw_box[1]) and title_size > artist_size:
+            title_font = ImageFont.truetype('/usr/share/fonts/droid/DroidSansMono.ttf', size=title_size)
+            title_box = draw.textbbox((epd_width / 2, image_height - title_location),
+                                        title_text, font=title_font, anchor="mb")
+            title_size -= 1
+
         draw.rectangle(draw_box, fill=(255, 255, 255, opacity))
-        draw.text((epd_width / 2, image_height - artist_location), artist_text, font=artist_font,
-                    anchor="mb", fill=0)
+        # draw.text((epd_width / 2, image_height - title_location), title_text, font=title_font,
+        #             anchor="mb", fill=(0,0,0), stroke_width=1, stroke_fill=(255,255,255))
+        # draw.text((epd_width / 2, image_height - artist_location), artist_text, font=artist_font,
+        #             anchor="mb", fill=(0,0,0), stroke_width=1, stroke_fill=(255,255,255))
+
+        title_outline = max(2, min(title_size//5, 4))
+        artist_outline = max(2, min(artist_size//5, 4))
+
         draw.text((epd_width / 2, image_height - title_location), title_text, font=title_font,
-                    anchor="mb", fill=0)
+                    anchor="mb", fill=(255,255,255), stroke_width=title_outline, stroke_fill=(0,0,0))
+        draw.text((epd_width / 2, image_height - artist_location), artist_text, font=artist_font,
+                    anchor="mb", fill=(255,255,255), stroke_width=artist_outline, stroke_fill=(0,0,0))
+
     return draw
 
+def min_area(area_list):
+    # initialise
+    a, b, c, d = area_list[0]
+
+    # find max for each element
+    for t in area_list:
+        at, bt, ct, dt = t
+        a = max(a, at)
+        b = max(b, bt)
+        c = min(c, ct)
+        d = min(d, dt)
+    tup = (a, b, c, d)
+    return tup
 
 def max_area(area_list):
     # initialise
@@ -106,18 +138,18 @@ def get_image(prompt, path='.', suffix=''):
     for i in r['images']:
         image = Image.open(io.BytesIO(base64.b64decode(i.split(",",1)[0])))
 
-        png_payload = {
-            "image": "data:image/png;base64," + i
-        }
-        response2 = requests.post(url=f'{url}/sdapi/v1/png-info', json=png_payload)
+        # png_payload = {
+        #     "image": "data:image/png;base64," + i
+        # }
+        # response2 = requests.post(url=f'{url}/sdapi/v1/png-info', json=png_payload)
 
-        pnginfo = PngImagePlugin.PngInfo()
-        pnginfo.add_text("parameters", response2.json().get("info"))
+        # pnginfo = PngImagePlugin.PngInfo()
+        # pnginfo.add_text("parameters", response2.json().get("info"))
 
         title, desc = gen_description(prompt)
         add_text_to_image(ImageDraw.Draw(image, 'RGBA'), 480, 800, title, desc)
 
-        image.save(f'output{suffix}.png', pnginfo=pnginfo)
+        image.save(f'output{suffix}.png')#, pnginfo=pnginfo)
 
 def gen_description(prompt):
     for c in '[]()':
