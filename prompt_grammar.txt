@@ -2,7 +2,7 @@
 
 .25 PRO     S
 1 PRO     S , MODS
-.5 PRO     NP
+.1 PRO     NP
 1.5 PRO     NP , MODS
 1 PRO Style N
 1 PRO Style N , MODS
@@ -31,6 +31,7 @@
 
 1 PP     P NP
 
+1 VP V
 1 VP     V NP
 1 VP     VDET P NP 
 .1 VP     VP PP
@@ -43,6 +44,8 @@
 1 V     chasing 
 1 V     eating
 1 V     posing
+1 V carrying
+1 V clapping
 
 1 VD     sitting
 1 VD     running
@@ -160,6 +163,9 @@
 1 N potato
 1 N lobster
 1 N window
+1 N guppy
+1 N goldfish
+1 N trout
 
 1 Artist rembrandt
 1 Artist monet
