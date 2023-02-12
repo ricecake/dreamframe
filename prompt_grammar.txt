@@ -5,15 +5,25 @@
 1 PRO     NP
 2 PRO     NP , MODS
 
-1 MODS     ADJ
+.5 MODS     ( ADJ )
+1 MODS     ( ADJ ), MODS
+.75 MODS     ADJ
 2 MODS     ADJ , MODS
 1 MODS     by Artist
+1 MODS Style style
+
+1 Style cyberpunk
+1 Style art art nouveau
+2 Style fart deco
+1 Style art deco
+1 Style dadism
 
 
 1 S     NP VP
 
 1 NP     Det N
 .5 NP    Det ADJ N 
+.25 NP    Det ( ADJ ) N 
 .1 NP     NP PP
 
 1 PP     P NP
@@ -154,6 +164,7 @@
 1 Artist magritte
 1 Artist vermeer
 1 Artist escher
+1 Artist michelangelo
 
 1 ADJ blue
 1 ADJ red 
