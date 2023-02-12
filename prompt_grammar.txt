@@ -9,6 +9,8 @@
 
 .5 MODS     ( ADJ )
 1 MODS     ( ADJ ), MODS
+.5 MODS     [ ADJ ]
+1 MODS     [ ADJ ], MODS
 .75 MODS     ADJ
 2 MODS     ADJ , MODS
 1 MODS     by Artist
@@ -21,11 +23,13 @@
 1 NP     Det N
 .5 NP    Det ADJ N 
 .25 NP    Det ( ADJ ) N 
+.25 NP    Det [ ADJ ] N 
 .1 NP     NP PP
 
 1 PP     P NP
 
 1 VP V
+1 VP VD
 1 VP     V NP
 1 VP     VDET P NP 
 .1 VP     VP PP
@@ -41,6 +45,23 @@
 2 Style fart deco
 1 Style art deco
 1 Style dadism
+1 Style punk
+1 Style grunge
+1 Style 80's
+1 Style pop art
+1 Style 50's
+1 Style 20's
+1 Style tudor
+1 Style disco
+1 Style hipster
+1 Style goth
+1 Style mall goth
+1 Style gothic
+1 Style raver
+1 Style atom punk
+1 Style childrens book
+1 Style watercolor
+1 Style fresco
 
 1 V     chasing 
 1 V     eating
