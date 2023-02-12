@@ -3,7 +3,9 @@
 .25 PRO     S
 1 PRO     S , MODS
 .5 PRO     NP
-2 PRO     NP , MODS
+1.5 PRO     NP , MODS
+1 PRO Style N
+1 PRO Style N , MODS
 
 .5 MODS     ( ADJ )
 1 MODS     ( ADJ ), MODS
