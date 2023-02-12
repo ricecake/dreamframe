@@ -2,9 +2,12 @@
 
 .25 PRO     S
 1 PRO     S , MODS
+1 PRO     NP
+2 PRO     NP , MODS
 
 1 MODS     ADJ
 2 MODS     ADJ , MODS
+1 MODS     by Artist
 
 
 1 S     NP VP
@@ -42,6 +45,80 @@
 1 P     as
 1 P     at
 
+
+## taken from https://www.englishclub.com/grammar/prepositions-list.htm
+1 P aboard
+1 P about
+1 P above
+1 P across
+1 P after
+1 P against
+1 P along
+1 P amid
+1 P among
+1 P anti
+1 P around
+1 P as
+1 P at
+1 P before
+1 P behind
+1 P below
+1 P beneath
+1 P beside
+1 P besides
+1 P between
+1 P beyond
+1 P but
+1 P by
+1 P concerning
+1 P considering
+1 P despite
+1 P down
+1 P during
+1 P except
+1 P excepting
+1 P excluding
+1 P following
+1 P for
+1 P from
+1 P in
+1 P inside
+1 P into
+1 P like
+1 P minus
+1 P near
+1 P of
+1 P off
+1 P on
+1 P onto
+1 P opposite
+1 P outside
+1 P over
+1 P past
+1 P per
+1 P plus
+1 P regarding
+1 P round
+1 P save
+1 P since
+1 P than
+1 P through
+1 P to
+1 P toward
+1 P towards
+1 P under
+1 P underneath
+1 P unlike
+1 P until
+1 P up
+1 P upon
+1 P versus
+1 P via
+1 P with
+1 P within
+1 P without
+
+
 1 N     dog 
 1 N     cat
 1 N     man
@@ -64,6 +141,19 @@
 1 N     bread
 1 N     toast
 1 N     raincoat
+
+
+1 Artist rembrandt
+1 Artist monet
+1 Artist van gogh
+1 Artist matisse
+1 Artist picasso
+1 Artist salvador dali
+1 Artist andy warhol
+1 Artist cezanne
+1 Artist magritte
+1 Artist vermeer
+1 Artist escher
 
 1 ADJ blue
 1 ADJ red 
