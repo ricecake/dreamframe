@@ -35,6 +35,7 @@
 1 P     on 
 1 P     in
 1 P     with
+1 P     as
 
 
 1 N     dog 
