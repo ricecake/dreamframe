@@ -4,7 +4,7 @@ import time
 import requests
 import io
 import base64
-from PIL import Image, ImageDraw, ImageFont, PngImagePlugin
+from PIL import Image, ImageDraw, ImageFont
 
 class New_Class(object):
     pass
