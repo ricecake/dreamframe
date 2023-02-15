@@ -1,10 +1,10 @@
 1 ROOT PRO
 
 .25 PRO     S
-1 PRO     S , MODS
+2 PRO     S , MODS
 .1 PRO     NP
 1.5 PRO     NP , MODS
-1 PRO Style N
+.75 PRO Style N
 1 PRO Style N , MODS
 
 .5 MODS     ( ADJ )
@@ -28,13 +28,19 @@
 
 1 PP     P NP
 
-1 VP V
-1 VP VD
+1 VP     V
+1 VP     VD
 1 VP     V NP
 1 VP     VDET P NP 
-.1 VP     VP PP
+.1 VP    VP PP
+1 VP     Adv V
+1 VP     Adv VD
+1 VP     Adv V NP
+1 VP     Adv VDET P NP 
+.1 VP    Adv VP PP
 
 1 VDET   VD P NP
+1 VDET   Adv VD P NP
 
 
 1 Det     a 
@@ -44,7 +50,7 @@
 1 Style fart nouveau
 2 Style fart deco
 1 Style art deco
-1 Style dadism
+1 Style dadist
 1 Style punk
 1 Style grunge
 1 Style 80's
@@ -65,6 +71,11 @@
 1 Style watercolor
 1 Style fresco
 1 Style comic book
+1 Style caricature
+1 Style photograph
+1 Style render
+1 Style smoke
+1 Style fractal
 
 1 V     chasing 
 1 V     eating
@@ -3073,5 +3084,345 @@
 1 N wake
 1 N wrap
 1 N yesterday
+
+
+
+
+
+
+
+
+1 Adv abnormally 
+1 Adv absentmindedly 
+1 Adv accidentally 
+1 Adv acidly
+1 Adv actually 
+1 Adv adventurously
+1 Adv afterwards 
+1 Adv almost 
+1 Adv always 
+1 Adv angrily 
+1 Adv annually 
+1 Adv anxiously 
+1 Adv arrogantly 
+1 Adv awkwardly
+1 Adv badly 
+1 Adv bashfully 
+1 Adv beautifully 
+1 Adv bitterly
+1 Adv bleakly
+1 Adv blindly 
+1 Adv blissfully
+1 Adv boastfully 
+1 Adv boldly 
+1 Adv bravely 
+1 Adv briefly 
+1 Adv brightly 
+1 Adv briskly 
+1 Adv broadly 
+1 Adv busily	
+1 Adv calmly 
+1 Adv carefully 
+1 Adv carelessly 
+1 Adv cautiously 
+1 Adv certainly
+1 Adv cheerfully 
+1 Adv clearly 
+1 Adv cleverly
+1 Adv closely 
+1 Adv coaxingly 
+1 Adv colorfully 
+1 Adv commonly
+1 Adv continually 
+1 Adv coolly 
+1 Adv correctly 
+1 Adv courageously 
+1 Adv crossly 
+1 Adv cruelly 
+1 Adv curiously
+1 Adv daily 
+1 Adv daintily
+1 Adv dearly 
+1 Adv deceivingly 
+1 Adv delightfully
+1 Adv deeply 
+1 Adv defiantly 
+1 Adv deliberately 
+1 Adv delightfully 
+1 Adv diligently 
+1 Adv dimly
+1 Adv doubtfully 
+1 Adv dreamily 
+1 Adv easily 
+1 Adv elegantly 
+1 Adv energetically 
+1 Adv enormously 
+1 Adv enthusiastically 
+1 Adv equally 
+1 Adv especially
+1 Adv even 
+1 Adv evenly 
+1 Adv eventually 
+1 Adv exactly 
+1 Adv excitedly 
+1 Adv extremely  
+1 Adv fairly 
+1 Adv faithfully 
+1 Adv famously 
+1 Adv far 
+1 Adv fast 
+1 Adv fatally 
+1 Adv ferociously 
+1 Adv fervently 
+1 Adv fiercely 
+1 Adv fondly 
+1 Adv foolishly 
+1 Adv fortunately 
+1 Adv frankly 
+1 Adv frantically
+1 Adv freely
+1 Adv frenetically 
+1 Adv frightfully
+1 Adv fully
+1 Adv furiously 
+1 Adv generally
+1 Adv generously
+1 Adv gently
+1 Adv gladly 
+1 Adv gleefully 
+1 Adv gracefully 
+1 Adv gratefully
+1 Adv greatly 
+1 Adv greedily
+1 Adv happily 
+1 Adv hastily 
+1 Adv healthily 
+1 Adv heavily 
+1 Adv helpfully 
+1 Adv helplessly 
+1 Adv highly 
+1 Adv honestly 
+1 Adv hopelessly 
+1 Adv hourly 
+1 Adv hungrily	
+1 Adv immediately 
+1 Adv innocently 
+1 Adv inquisitively 
+1 Adv instantly 
+1 Adv intensely 
+1 Adv intently 
+1 Adv interestingly 
+1 Adv inwardly 
+1 Adv irritably	
+1 Adv jaggedly
+1 Adv jealously
+1 Adv joshingly
+1 Adv joyfully
+1 Adv joyously 
+1 Adv jovially
+1 Adv jubilantly
+1 Adv judgmentally
+1 Adv justly
+1 Adv keenly
+1 Adv kiddingly
+1 Adv kindheartedly
+1 Adv kindly
+1 Adv knavishly
+1 Adv knottily
+1 Adv knowingly
+1 Adv knowledgeably
+1 Adv kookily	
+1 Adv lazily 
+1 Adv less 
+1 Adv lightly 
+1 Adv likely 
+1 Adv limply
+1 Adv lively
+1 Adv loftily
+1 Adv longingly 
+1 Adv loosely
+1 Adv lovingly 
+1 Adv loudly 
+1 Adv loyally
+1 Adv madly 
+1 Adv majestically 
+1 Adv meaningfully 
+1 Adv mechanically 
+1 Adv merrily 
+1 Adv miserably 
+1 Adv mockingly 
+1 Adv monthly 
+1 Adv more 
+1 Adv mortally 
+1 Adv mostly 
+1 Adv mysteriously	
+1 Adv naturally 
+1 Adv nearly 
+1 Adv neatly
+1 Adv needily 
+1 Adv nervously 
+1 Adv never 
+1 Adv nicely
+1 Adv noisily 
+1 Adv not	
+1 Adv obediently 
+1 Adv obnoxiously 
+1 Adv oddly
+1 Adv offensively
+1 Adv officially
+1 Adv often 
+1 Adv only 
+1 Adv openly 
+1 Adv optimistically
+1 Adv overconfidently
+1 Adv owlishly
+1 Adv painfully 
+1 Adv partially 
+1 Adv patiently 
+1 Adv perfectly 
+1 Adv physically 
+1 Adv playfully 
+1 Adv politely 
+1 Adv poorly 
+1 Adv positively
+1 Adv potentially
+1 Adv powerfully 
+1 Adv promptly 
+1 Adv properly
+1 Adv punctually
+1 Adv quaintly
+1 Adv quarrelsomely
+1 Adv queasily
+1 Adv queerly
+1 Adv questionably
+1 Adv questioningly
+1 Adv quicker
+1 Adv quickly
+1 Adv quietly
+1 Adv quirkily
+1 Adv quizzically
+1 Adv rapidly 
+1 Adv rarely 
+1 Adv readily
+1 Adv really 
+1 Adv reassuringly
+1 Adv recklessly 
+1 Adv regularly 
+1 Adv reluctantly
+1 Adv repeatedly 
+1 Adv reproachfully
+1 Adv restfully
+1 Adv righteously
+1 Adv rightfully
+1 Adv rigidly 
+1 Adv roughly 
+1 Adv rudely 
+1 Adv sadly 
+1 Adv safely 
+1 Adv scarcely 
+1 Adv scarily 
+1 Adv searchingly 
+1 Adv sedately 
+1 Adv seemingly 
+1 Adv seldom 
+1 Adv selfishly 
+1 Adv separately
+1 Adv seriously 
+1 Adv shakily 
+1 Adv sharply
+1 Adv sheepishly 
+1 Adv shrilly 
+1 Adv shyly 
+1 Adv silently 
+1 Adv sleepily 
+1 Adv slowly 
+1 Adv smoothly 
+1 Adv softly
+1 Adv solemnly 
+1 Adv solidly
+1 Adv sometimes 
+1 Adv soon 
+1 Adv speedily 
+1 Adv stealthily 
+1 Adv sternly 
+1 Adv strictly
+1 Adv successfully
+1 Adv suddenly 
+1 Adv surprisingly
+1 Adv suspiciously
+1 Adv sweetly 
+1 Adv swiftly 
+1 Adv sympathetically
+1 Adv tenderly
+1 Adv tensely 
+1 Adv terribly
+1 Adv thankfully
+1 Adv thoroughly
+1 Adv thoughtfully
+1 Adv tightly
+1 Adv tomorrow 
+1 Adv too 
+1 Adv tremendously
+1 Adv triumphantly
+1 Adv truly
+1 Adv truthfully
+1 Adv ultimately
+1 Adv unabashedly
+1 Adv unaccountably
+1 Adv unbearably
+1 Adv unethically
+1 Adv unexpectedly 
+1 Adv unfortunately
+1 Adv unimpressively
+1 Adv unnaturally
+1 Adv unnecessarily
+1 Adv utterly
+1 Adv upbeat
+1 Adv upliftingly
+1 Adv upright
+1 Adv upside-down
+1 Adv upward
+1 Adv upwardly
+1 Adv urgently
+1 Adv usefully
+1 Adv uselessly
+1 Adv usually
+1 Adv utterly
+1 Adv vacantly
+1 Adv vaguely
+1 Adv vainly
+1 Adv valiantly
+1 Adv vastly
+1 Adv verbally
+1 Adv very 
+1 Adv viciously
+1 Adv victoriously 
+1 Adv violently
+1 Adv vivaciously 
+1 Adv voluntarily	
+1 Adv warmly
+1 Adv weakly 
+1 Adv wearily 
+1 Adv well 
+1 Adv wetly
+1 Adv wholly
+1 Adv wildly
+1 Adv willfully
+1 Adv wisely
+1 Adv woefully
+1 Adv wonderfully
+1 Adv worriedly
+1 Adv wrongly
+1 Adv yawningly
+1 Adv yearly 
+1 Adv yearningly
+1 Adv yesterday
+1 Adv yieldingly
+1 Adv youthfully	
+1 Adv zealously   
+1 Adv zestfully    
+1 Adv zestily
+
+
 
 
