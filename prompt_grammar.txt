@@ -52,6 +52,8 @@
 1 Style 50's
 1 Style 20's
 1 Style tudor
+1 Style victorian
+1 Style elizabethan 
 1 Style disco
 1 Style hipster
 1 Style goth
