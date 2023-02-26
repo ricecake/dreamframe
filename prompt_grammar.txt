@@ -76,6 +76,14 @@
 1 Style render
 1 Style smoke
 1 Style fractal
+1 Style puppet
+1 Style delicate
+1 Style intricate
+1 Style Neon
+1 Style vaporwave
+1 Style realism
+1 Style pinup
+
 
 1 V     chasing 
 1 V     eating
@@ -186,6 +194,7 @@
 1 N guppy
 1 N goldfish
 1 N trout
+1 N Mushroom
 
 1 Artist rembrandt
 1 Artist monet
@@ -200,6 +209,8 @@
 1 Artist escher
 1 Artist michelangelo
 1 Artist hieronymus bosch
+1 Artist yoshitaka amano
+
 
 1 ADJ blue
 1 ADJ red 
