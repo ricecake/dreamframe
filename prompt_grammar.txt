@@ -210,6 +210,8 @@
 1 Artist michelangelo
 1 Artist hieronymus bosch
 1 Artist yoshitaka amano
+1 Artist hr Geiger
+1 Artist Caravaggio 
 
 
 1 ADJ blue
