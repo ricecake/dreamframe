@@ -83,6 +83,8 @@
 1 Style vaporwave
 1 Style realism
 1 Style pinup
+1 Style medieval manuscript
+1 Style cubism
 
 
 1 V     chasing 
@@ -212,6 +214,7 @@
 1 Artist yoshitaka amano
 1 Artist hr Geiger
 1 Artist Caravaggio 
+1 Artist Modigliani 
 
 
 1 ADJ blue
