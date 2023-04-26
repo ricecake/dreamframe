@@ -215,6 +215,7 @@
 1 Artist hr Geiger
 1 Artist Caravaggio 
 1 Artist Modigliani 
+1 Artist frida Kahlo 
 
 
 1 ADJ blue
