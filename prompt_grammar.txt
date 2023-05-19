@@ -71,6 +71,9 @@
 1 Style watercolor
 1 Style fresco
 1 Style comic book
+1 Style cel-shaded
+1 Style cel-shaded comic book
+1 Style 2d
 1 Style caricature
 1 Style photograph
 1 Style render
