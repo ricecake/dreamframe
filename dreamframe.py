@@ -5,6 +5,8 @@ import requests
 import io
 import base64
 from PIL import Image, ImageDraw, ImageFont
+from omni_epd import displayfactory, EPDNotFoundError
+displayName = "waveshare_epd.epd7in3f"
 
 class New_Class(object):
     pass
@@ -41,8 +43,8 @@ def add_text_to_image(draw, image_height, epd_width, title_text="", artist_text=
                         title_size=25,
                         artist_size=15):
 
-    title_font = ImageFont.truetype('/usr/share/fonts/droid/DroidSansMono.ttf', size=title_size)
-    artist_font = ImageFont.truetype('/usr/share/fonts/droid/DroidSansMono.ttf', size=artist_size)
+    title_font = ImageFont.truetype('/usr/share/fonts/truetype/freefont/FreeSans.ttf', size=title_size)
+    artist_font = ImageFont.truetype('/usr/share/fonts/truetype/freefont/FreeSans.ttf', size=artist_size)
     # proceed flag only to be set if set by prerequisite requirements
     proceed = False
 
@@ -63,7 +65,7 @@ def add_text_to_image(draw, image_height, epd_width, title_text="", artist_text=
 
     draw_box = max_area([artist_box, title_box])
     draw_box = tuple(sum(x) for x in zip(draw_box, (-padding, -padding, padding, padding)))
-    
+
     draw_box = min_area([(0, 0, epd_width, image_height), draw_box])
 
     # Only draw if we previously set proceed flag
@@ -71,7 +73,7 @@ def add_text_to_image(draw, image_height, epd_width, title_text="", artist_text=
 
         # while (title_box is None or title_box[0] > draw_box[2] - draw_box[0] or title_box[1] > draw_box[3] - draw_box[1]) and title_size > artist_size:
         while (title_box is None or title_box[0] < draw_box[0] or title_box[1] < draw_box[1]) and title_size > artist_size:
-            title_font = ImageFont.truetype('/usr/share/fonts/droid/DroidSansMono.ttf', size=title_size)
+            title_font = ImageFont.truetype('/usr/share/fonts/truetype/freefont/FreeSans.ttf', size=title_size)
             title_box = draw.textbbox((epd_width / 2, image_height - title_location),
                                         title_text, font=title_font, anchor="mb")
             title_size -= 1
@@ -121,14 +123,14 @@ def max_area(area_list):
     return tup
 
 
-def get_image(prompt, path='.', suffix=''):
-    url = "http://192.168.50.147:7860"
+def get_image(prompt, width=800, height=480):
+    url = "http://192.168.50.69:7860"
 
     payload = {
         "prompt": prompt,
         "steps": 20,
-        "width": 800,
-        "height": 480,
+        "width": width,
+        "height": height,
     }
 
     response = requests.post(url=f'{url}/sdapi/v1/txt2img', json=payload)
@@ -149,7 +151,9 @@ def get_image(prompt, path='.', suffix=''):
         title, desc = gen_description(prompt)
         add_text_to_image(ImageDraw.Draw(image, 'RGBA'), 480, 800, title, desc)
 
-        image.save(f'output{suffix}.png')#, pnginfo=pnginfo)
+        # image.save(f'output{suffix}.png')#, pnginfo=pnginfo)
+        return image
+
 
 def gen_description(prompt):
     for c in '[]()':
@@ -171,6 +175,14 @@ def main(argv):
     c = New_Class()
     parser.parse_args(args=argv, namespace=c)
     grammar = open(c.g_arg)
+
+
+    print('Loading display')
+    try:
+        epd = displayfactory.load_display_driver(displayName)
+    except EPDNotFoundError:
+        print(f"Couldn't find {displayName}")
+        sys.exit()
 
     lines = grammar.readlines()
     rules=[]
@@ -196,7 +208,20 @@ def main(argv):
         sentence_generator(rules,'ROOT',non_terminal, sentence)
         sen = ' '.join(sentence)
         print(sen)
-        get_image(sen, suffix=f'_{now}_{i}')
+        image = get_image(sen, width=epd.width, height=epd.height)
+        # prepare the epd, write the image, and close
+        print('Writing to display')
+
+        from pprint import pprint
+        pprint(vars(epd))
+
+        epd.prepare()
+        epd.display(image)
+        epd.sleep()
+        epd.close()
+        sys.exit()
+
+
 
 if __name__ == "__main__":
     main(sys.argv[1:])
